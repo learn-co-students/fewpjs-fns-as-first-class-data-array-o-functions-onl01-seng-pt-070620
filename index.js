@@ -28,7 +28,7 @@ function unleashDog(dogName, dogBreed) {
     return `Unleash ${dogName} the ${dogBreed}`
 }
 
-let routine = [
+const routine = [
     wakeDog,
     leashDog,
     walkToPark,
@@ -38,7 +38,5 @@ let routine = [
 ]
 
 function exerciseDog(dogName, dogBreed) {
-    for (let i = 0; i < routine.length; i++) { 
-        console.log(routine[i]); 
-}
+    return routine.map(fn => fn(dogName, dogBreed));
 }
